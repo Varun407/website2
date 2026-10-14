@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Varun407.github.io/we-write-you-chill-web",
+  "homepage": "https://wewriteyouchill.com.au",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

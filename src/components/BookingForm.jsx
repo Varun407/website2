@@ -18,6 +18,9 @@ export default function BookingForm({ isOpen, onClose, mode = 'booking' }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (formData.linkedin && /^(javascript|data|vbscript):/i.test(formData.linkedin.trim())) {
+      return;
+    }
     setSubmitted(true);
   };
 
@@ -135,7 +138,8 @@ export default function BookingForm({ isOpen, onClose, mode = 'booking' }) {
                       <div className="relative">
                         <Globe className="w-4 h-4 text-slate-400 absolute left-3 top-3" />
                         <input
-                          type="url"
+                          type="text"
+                          inputMode="url"
                           placeholder="linkedin.com/in/yourname"
                           value={formData.linkedin}
                           onChange={(e) => setFormData({ ...formData, linkedin: e.target.value })}
